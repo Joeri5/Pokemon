@@ -164,7 +164,7 @@ const App = () => {
 
     function catchPokemon() {
         const chance = Math.floor(Math.random() * hp);
-        if (chance <= 200) {
+        if (chance <= 10) {
             if (catchedOne === false) {
                 setCatchedOne(true);
             } else if (catchedOne === true && catchedTwo === false) {
