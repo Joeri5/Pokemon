@@ -141,8 +141,8 @@ const App = () => {
     const [attacking, setAttacking] = useState(false);
 
     function attack() {
-        const chance = Math.floor(Math.random() * 5) + 1;
-        if (chance === 1) {
+        const chance = Math.floor(Math.random() * 3) + 1;
+        if (chance === 3) {
             setHp(hp - 10);
             setAttacking(true);
         } else {
@@ -164,7 +164,7 @@ const App = () => {
 
     function catchPokemon() {
         const chance = Math.floor(Math.random() * hp);
-        if (chance <= 10) {
+        if (chance <= 25) {
             if (catchedOne === false) {
                 setCatchedOne(true);
             } else if (catchedOne === true && catchedTwo === false) {
@@ -194,10 +194,6 @@ const App = () => {
             }, 2000);
         }
     }
-
-    console.log(catchedThree);
-
-    console.log(hp);
 
     return (
         <AppWrapper>
