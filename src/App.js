@@ -142,9 +142,9 @@ const App = () => {
 
     function attack() {
         const chance = Math.floor(Math.random() * 3) + 1;
+        setAttacking(true);
         if (chance === 3) {
             setHp(hp - 10);
-            setAttacking(true);
         } else {
             setMissed(true);
             setTimeout(() => {
